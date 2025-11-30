@@ -1,5 +1,5 @@
 
-Exp 5 Experimental verification of frequency response of Digital fiber optic link
+# Exp 5 Experimental verification of frequency response of Digital fiber optic link
 # Digital Fiber Optic Link Analysis (600nm)
 
 ## AIM
@@ -8,12 +8,11 @@ To analyze the relationship between input and received signal of a 600nm fiber o
 ---
 
 ## EQUIPMENTS REQUIRED
--	Link-B Kit with power supply.
--	Patch chords.
--	20MHz Dual Channel Oscilloscope.
--	1 MHz Function Generator.
--	1 Meter Fiber Cable.
-
+- Fiber optic trainer kit ST 2502  
+- Power supply  
+- Patch cords  
+- CRO (Cathode Ray Oscilloscope)  
+- 660 nm fiber cable  
 
 ---
 
@@ -35,6 +34,7 @@ The photodiode converts the detected light into a photocurrent. With the aid of 
 
 ## PROCEDURE
 
+-	Refer to the block diagram & carry out the following connections and settings.
 -	Connect the power supply with proper polarity to the kit link-B and switch it on.
 -	Keep all Switch Faults in OFF position.
 -	Keep switch SW8 towards TX position.
@@ -45,31 +45,31 @@ The photodiode converts the detected light into a photocurrent. With the aid of 
 -	Keep Jumper JP8 towards Pulse position.
 -	Feed TTL Square wave signal of 1KHz from the function generator to the IN post of Digital Buffer.
 
-<img width="807" height="292" alt="image" src="https://github.com/user-attachments/assets/a633250d-e38b-44ef-a9d4-c7e078b04217" />
+<img width="807" height="292" alt="image" src="https://github.com/user-attachments/assets/f9bd39b6-f1b5-4e1c-a086-4f6bd3a52ee9" />
+
+
  
 -	Connect the output post OUT of Digital Buffer to the post TX IN of Transmitter.
 -	Slightly unscrew the cap of SFH756V (660nm). Do not remove the cap from the connector. Once the cap is loosened, insert the one meter fiber into the cap. Now tighten the cap by screwing it back.
 -	Connect the other end of the Fiber to detector SFH551V (Photo Transistor Detector) very carefully.
 -	Observe the detected signal at post TTL OUT on oscilloscope.
+ <img width="814" height="295" alt="image" src="https://github.com/user-attachments/assets/0eafefb0-6de6-4fb6-8d63-7049f3de9175" />
 
-<img width="814" height="295" alt="image" src="https://github.com/user-attachments/assets/10f611af-fbb1-42d2-bb2c-b1a27da9fea4" />
-
- 
 -	To measure the digital bandwidth of the phototransistor vary the input signal frequency and observe the detected signal at various frequencies.
 -	Determine the frequency at which the detector stops recovering the signal. This determines the max. bit rate on the digital link.
 -	Keep switch SW9 towards TX2 position.
 -	Keep Jumper JP7 towards +5V position.
 -	Remove fiber cable from SFH756V (660nm) and slightly unscrew the cap of SFH450V (950nm). Do not remove the cap from the connector. Once the cap is loosened, insert the one meter fiber into the cap. Now tighten the cap by screwing it back.
 -	Observe the detected signal at post TTL OUT on oscilloscope.
- 
- <img width="838" height="303" alt="image" src="https://github.com/user-attachments/assets/8d9bec6a-254a-428d-80f3-5e453cef0e62" />
+
+<img width="838" height="303" alt="image" src="https://github.com/user-attachments/assets/2c30aa41-05c2-49e8-a3c3-555ad9087f0d" />
 
 ---
 
 
 ## BLOCK DIAGRAM
 
-*(Insert block diagram here)*
+<img width="890" height="529" alt="Screenshot 2025-11-11 192121" src="https://github.com/user-attachments/assets/435b8e26-0b42-493e-9d58-2459aba62701" />
 
 ---
 
@@ -78,16 +78,28 @@ The photodiode converts the detected light into a photocurrent. With the aid of 
 
 | Frequency (Hz) | Output Signal Amplitude (Vo) | Gain = Vo/Vi | Gain in dB |
 |----------------|------------------------------|--------------|------------|
-|                |                              |              |            |
+|     800        |             2.5 v            |     0.5      |  -6.02     |
+|     1k         |             32 v             |     6.4      |   16.12    |
+|     2k         |             34 v             |     6.8      |   16.65    |
+|     5k         |             36 v             |     7.2      |   17.14    |
+|     10k        |             37 v             |     7.4      |   17.38    |
+|     20k        |             37 v             |     7.4      |   17.38    |
+|     50k        |             37 v             |     7.4      |   17.38    |
+|     100k       |             27 v             |     5.4      |   14.64    |
+|     250k       |             12.7 v           |     2.54     |   8.096    |
 
 ---
-
 ## MODEL GRAPH
 
-*(Insert model graph here)*
+<img width="880" height="538" alt="Screenshot 2025-11-11 190804" src="https://github.com/user-attachments/assets/25ece563-cf37-448d-8b86-19078ca43f90" />
+---
+## GRAPH
+
+![Exp5](https://github.com/user-attachments/assets/c32a9cae-6b34-401f-bc51-bb664ff52124)
+
 
 ---
 
 ## RESULT
 
-*(Summarize observations and conclusions here)*
+Thus, the experiment confirms that the 600 nm fiber optic link exhibits a stable frequency response within its mid-range and shows attenuation at higher frequencies, validating the theoretical characteristics of digital fiber transmission.
